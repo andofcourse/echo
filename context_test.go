@@ -390,8 +390,7 @@ func TestContextRedirect(t *testing.T) {
 }
 
 func TestContextStore(t *testing.T) {
-	var c Context
-	c = new(context)
+	var c Context = new(context)
 	c.Set("name", "Jon Snow")
 	assert.Equal(t, "Jon Snow", c.Get("name"))
 }
